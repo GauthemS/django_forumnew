@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}{% load static %}
+
+<section class="content">
+    <section class="post_form">
+      <form action="/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="NAME" required />
+        <textarea name="body" placeholder="Tell us anything" required></textarea>
+        <input type="submit" value="Post" />
+      </form>
+    </section>
